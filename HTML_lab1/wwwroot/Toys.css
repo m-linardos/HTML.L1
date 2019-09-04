@@ -10,3 +10,31 @@ h1, h2 {
     
        
 }
+
+
+header {
+    font-size: 50px;
+    text-align: center;
+    border: 2px ridge;
+    border-width: 50px;
+    border: 20px groove;
+    background-color: pink;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+nav a{
+      text-decoration-style:none;
+      border:1px solid ;
+      border-radius:5px 5px 0 0;
+      margin-right:-5px;
+      padding:5px;
+}
+
+nav {
+    border-bottom:1px solid;
+    padding-bottom: 5px;
+    margin-top:10px;
+
+}
