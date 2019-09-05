@@ -9,16 +9,19 @@
     <h1>New User</h1>
 
     <form name="UserLogIn" action="http://www.maxtrain.com" method="get">
-        First Name <input type="text" name="fName" id="fName" />    <!-- don't have fName show up in url; instead use name in get and in program model have that name = fName (ex. firstName = fName) (9/5/19-p2-1:38)-->
-        Last Name <input type="text" name="lName" id="lName" />    
+        <label>First Name </label><input type="text" name="fName" id="fName" />    <!-- don't have fName show up in url; instead use name in get and in program model have that name = fName (ex. firstName = fName) (9/5/19-p2-1:38)-->
+        <!-- lABEL ALLOWS THE CURSOR TO BE PLACED IN THE BOX ; Helps manage ?? -->
+        Last Name <input type="text" name="lName" id="lName" />
         Password <input type="password" name="secret" id="secret" />     <!-- This allows your password to be hidden-->
-        <br/>
+        <br />
         <input type="hidden" name="CISTID" value="123" />   <!-- this is vulnerable to hackers /  If this is embedded in a complicated program do one way hash to make unrecognizeable-->
 
         <br />
         <input type="checkbox" value="yup" name="IsAdmin" />    Are you an administrator    <!-- names are case sensitive-->
         <br />
 
+
+        <input type="checkbox" value="yup" name="IsAdmin" />
 
 
         <input type="submit" value="Submit" />                  <!-- only works with forms-->
