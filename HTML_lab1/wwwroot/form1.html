@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<!---- ////// use in PRS-->
+<head>
+    <meta charset="utf-8" />
+    <title>User Form</title>
+</head>
+<body>
+    <h1>New User</h1>
+
+    <form name="UserLogIn" action="http://www.maxtrain.com" method="get">
+        First Name <input type="text" name="fName" id="fName" />    <!-- don't have fName show up in url; instead use name in get and in program model have that name = fName (ex. firstName = fName) (9/5/19-p2-1:38)-->
+        Last Name <input type="text" name="lName" id="lName" />    
+        Password <input type="password" name="secret" id="secret" />     <!-- This allows your password to be hidden-->
+        <br/>
+        <input type="hidden" name="CISTID" value="123" />   <!-- this is vulnerable to hackers /  If this is embedded in a complicated program do one way hash to make unrecognizeable-->
+
+        <br />
+        <input type="checkbox" value="yup" name="IsAdmin" />    Are you an administrator    <!-- names are case sensitive-->
+        <br />
+
+
+
+        <input type="submit" value="Submit" />                  <!-- only works with forms-->
+        <button onclick="alert('Welcome ' + UserLogIn.fName.value + ' ' + UserLogIn.lName.value)">Save</button>       <!---- JS used in PRS-->
+
+    </form>
+
+</body>
+</html>
+
+<!--
+    
+---- PRS ----
+
+    (9/5/19-p2-1:12)
+    If changed to POST
+    this returned to user after applying submit button
+    https://maxtrain.com/?fName=Barry&lName=Allen
+
+    checkbox for admin
+    returned after clicked (and submitted) / notice key value pairs and use of & signs
+    https://maxtrain.com/?fName=Barry&lName=Allen&IsAdmin=yup
+
+    -->
