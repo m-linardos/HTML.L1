@@ -3,8 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
 </head>
 <body>
 
+    <script>
+    $.ajax(
+        {
+            url: "http://maxrestdemo.azurewebsites.net/odata/Bikes",
+            method: "GET",
+            headers: { "accept": "application/json; odata=verbose"} ,   // name value pairs    ,
+            success: function (d) { alert(JSON.stringify(d)) },
+            error: function () {alert('error')}
+        }
+    )
+</script>
 </body>
 </html>
